@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ABIT Brand Colors */
+  --abit-blue: #0916F8;
+  --abit-yellow: #FABC0D;
+  --abit-orange: #F7750B;
+  --abit-red: #F80641;
+  --abit-ink: #373737;
+  --abit-bg-soft-1: #EFE9CE;
+  --abit-bg-soft-2: #F2EFEB;
+  --abit-surface: #FFFFFF;
+  --abit-pink-soft: #FFD6CE;
+
+  /* shadcn/ui variables */
+  --background: 242 239 235; /* abit-bg-soft-2 as HSL */
+  --foreground: 55 55 55; /* abit-ink as HSL */
+  --card: 0 0% 100%;
+  --card-foreground: 55 55 55;
+  --popover: 0 0% 100%;
+  --popover-foreground: 55 55 55;
+  --primary: 224 93 97; /* abit-blue as HSL */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 48 95 52; /* abit-yellow as HSL */
+  --secondary-foreground: 55 55 55;
+  --muted: 239 237 233; /* lighter version of bg-soft-2 */
+  --muted-foreground: 115 115 115;
+  --accent: 22 95 51; /* abit-orange as HSL */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 350 95 61; /* abit-red as HSL */
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 224 93 97; /* abit-blue as HSL */
+  --radius: 1rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply text-[var(--abit-ink)] font-body leading-body;
+    background-color: #F2EFEB !important;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    background-color: #F2EFEB !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  /* Skip link for accessibility */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[var(--abit-blue)] focus:text-white focus:rounded-md focus:shadow-lg;
+  }
+}
+
+@layer components {
+  /* Custom button utilities */
+  .btn-primary {
+    @apply bg-[var(--abit-blue)] text-white hover:bg-[var(--abit-blue)] hover:opacity-90 focus-visible:ring-[var(--abit-yellow)] focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply border-[var(--abit-ink)] text-[var(--abit-ink)] hover:bg-[var(--abit-ink)] hover:text-white focus-visible:ring-[var(--abit-yellow)] focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+  
+  /* Gradient overlays */
+  .gradient-yellow-orange {
+    background: linear-gradient(135deg, var(--abit-yellow) 0%, var(--abit-orange) 100%);
+  }
+  
+  /* Focus visible improvements */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:ring-offset-2;
+  }
+}
+
+/* TODO: Import TT Commons Pro when license/source is provided */
+/* For now using Inter as fallback */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
