@@ -9,7 +9,8 @@ import { cn } from "@/lib/utils"
 
 const NAV_ITEMS = [
   { name: "Publications", href: "/publications" },
-  { name: "Collaborations", href: "/collaborations" },
+  { name: "Events", href: "/events" },
+  { name: "Consulting", href: "/consulting" },
   { name: "Research", href: "/research" },
 ]
 
@@ -20,16 +21,16 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b-2" style={{backgroundColor: '#EFE9CE', borderBottomColor: '#FABC0D'}}>
       <div className="container flex h-16 items-center">
         {/* Logo */}
-        <Link 
-          href="/" 
-          className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:rounded-md"
+        <Link
+          href="/"
+          className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:rounded-md group"
         >
-          <Image 
+          <Image
             src="/images/abit-logo.png"
             alt="ABIT - Ashoka Behavioral Insights Team"
             width={120}
             height={48}
-            className="h-12 w-auto object-contain"
+            className="h-12 w-auto object-contain rounded-[25%] transition-all duration-300 ease-out group-hover:scale-105 group-hover:rotate-1"
             priority
           />
         </Link>
@@ -45,7 +46,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-[var(--abit-blue)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:rounded-md px-3 py-2",
+                  "text-sm font-medium transition-all duration-200 ease-out hover:text-[var(--abit-blue)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:rounded-md px-3 py-2",
                   pathname === item.href
                     ? "text-[var(--abit-blue)] border-b-2 border-[var(--abit-blue)]"
                     : "text-[var(--abit-ink)]"
