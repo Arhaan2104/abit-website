@@ -14,7 +14,8 @@ import {
 
 const NAV_ITEMS = [
   { name: "Publications", href: "/publications" },
-  { name: "Collaborations", href: "/collaborations" },
+  { name: "Events", href: "/events" },
+  { name: "Consulting", href: "/consulting" },
   { name: "Research", href: "/research" },
 ]
 
@@ -48,7 +49,7 @@ export function MobileNav() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block py-2 text-lg text-[var(--abit-ink)] hover:text-[var(--abit-blue)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:rounded-md"
+                  className="block py-2 text-lg text-[var(--abit-ink)] hover:text-[var(--abit-blue)] hover:translate-x-2 transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:rounded-md"
                 >
                   {item.name}
                 </Link>

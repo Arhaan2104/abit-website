@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden" style={{backgroundColor: '#F2EFEB'}}>
+    <section className="relative overflow-hidden">
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-yellow-orange opacity-10" />
       
@@ -11,7 +11,7 @@ export function Hero() {
           {/* Left content */}
           <div className="space-y-8">
             {/* Main heading */}
-            <div className="space-y-4">
+            <div className="space-y-4 animate-fade-in">
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-[var(--abit-red)]">
                 ASHOKA
                 <br />
@@ -19,15 +19,15 @@ export function Hero() {
                 <br />
                 INSIGHTS TEAM
               </h1>
-              
+
               <p className="text-lg lg:text-xl text-[var(--abit-blue)] font-medium">
                 Striving to drive impactful change
               </p>
             </div>
 
             {/* India's first badge */}
-            <div className="inline-block">
-              <div className="bg-[var(--abit-surface)] border-2 border-[var(--abit-blue)] rounded-2xl px-6 py-4">
+            <div className="inline-block animate-slide-up" style={{animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards'}}>
+              <div className="bg-[var(--abit-surface)] border-2 border-[var(--abit-blue)] rounded-2xl px-6 py-4 transition-all duration-300 hover:shadow-lg hover:scale-105">
                 <h2 className="font-heading text-lg sm:text-xl font-bold text-[var(--abit-blue)]">
                   INDIA&apos;S FIRST STUDENT-LED
                   <br />

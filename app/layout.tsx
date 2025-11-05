@@ -4,6 +4,7 @@ import { Anton, Inter } from "next/font/google"
 import { generateSEO } from "@/lib/seo"
 import { Navbar } from "@/app/(site)/components/navbar"
 import { Footer } from "@/app/(site)/components/footer"
+import { CursorFollower } from "@/app/(site)/components/cursor-follower"
 
 const anton = Anton({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${anton.variable} ${inter.variable}`}>
       <body className="min-h-screen flex flex-col">
+        <CursorFollower />
         <a href="#main" className="skip-link">
           Skip to main content
         </a>

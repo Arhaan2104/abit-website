@@ -49,12 +49,23 @@
   
   body {
     @apply text-[var(--abit-ink)] font-body leading-body;
-    background-color: #F2EFEB !important;
     font-feature-settings: "rlig" 1, "calt" 1;
+    position: relative;
+    background-color: #F2EFEB;
+    background-image:
+      linear-gradient(rgba(55, 55, 55, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(55, 55, 55, 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-attachment: fixed;
   }
-  
+
   html {
-    background-color: #F2EFEB !important;
+    background-color: #F2EFEB;
+    background-image:
+      linear-gradient(rgba(55, 55, 55, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(55, 55, 55, 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-attachment: fixed;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -70,24 +81,82 @@
 @layer components {
   /* Custom button utilities */
   .btn-primary {
-    @apply bg-[var(--abit-blue)] text-white hover:bg-[var(--abit-blue)] hover:opacity-90 focus-visible:ring-[var(--abit-yellow)] focus-visible:ring-2 focus-visible:ring-offset-2;
+    @apply bg-[var(--abit-blue)] text-white hover:bg-[var(--abit-blue)] hover:opacity-90 hover:scale-105 transition-all duration-200 ease-out focus-visible:ring-[var(--abit-yellow)] focus-visible:ring-2 focus-visible:ring-offset-2;
   }
-  
+
   .btn-secondary {
-    @apply border-[var(--abit-ink)] text-[var(--abit-ink)] hover:bg-[var(--abit-ink)] hover:text-white focus-visible:ring-[var(--abit-yellow)] focus-visible:ring-2 focus-visible:ring-offset-2;
+    @apply border-[var(--abit-ink)] text-[var(--abit-ink)] hover:bg-[var(--abit-ink)] hover:text-white hover:scale-105 transition-all duration-200 ease-out focus-visible:ring-[var(--abit-yellow)] focus-visible:ring-2 focus-visible:ring-offset-2;
   }
-  
+
   /* Gradient overlays */
   .gradient-yellow-orange {
     background: linear-gradient(135deg, var(--abit-yellow) 0%, var(--abit-orange) 100%);
   }
-  
+
   /* Focus visible improvements */
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:ring-offset-2;
+  }
+
+  /* Subtle animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
   }
 }
 
 /* TODO: Import TT Commons Pro when license/source is provided */
 /* For now using Inter as fallback */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* TODO: Replace with actual Zuume Rough Bold file when available */
+@font-face {
+  font-family: "ZuumeRough-Bold";
+  src: local("ZuumeRough-Bold"); /* replace with url('/fonts/ZuumeRough-Bold.woff2') when provided */
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-zuume {
+  font-family: "ZuumeRough-Bold", var(--font-anton), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+}

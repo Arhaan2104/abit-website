@@ -40,19 +40,19 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-[var(--abit-bg-soft-1)]" style={{backgroundColor: '#F2EFEB'}}>
+    <footer className="border-t border-[var(--abit-bg-soft-1)]">
       <div className="container py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="space-y-4">
-              <Link href="/" className="inline-block">
-                <Image 
+              <Link href="/" className="inline-block group">
+                <Image
                   src="/images/abit-logo.png"
                   alt="ABIT - Ashoka Behavioral Insights Team"
                   width={100}
                   height={40}
-                  className="h-10 w-auto object-contain"
+                  className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </Link>
               <p className="text-sm text-[var(--abit-ink)]/70 leading-relaxed">
@@ -66,7 +66,7 @@ export function Footer() {
                   <Link
                     key={social.name}
                     href={social.href}
-                    className="p-2 rounded-lg bg-[var(--abit-bg-soft-1)] text-[var(--abit-ink)] hover:bg-[var(--abit-blue)] hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:ring-offset-2"
+                    className="p-2 rounded-lg bg-[var(--abit-bg-soft-1)] text-[var(--abit-ink)] hover:bg-[var(--abit-blue)] hover:text-white hover:scale-110 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:ring-offset-2"
                     aria-label={social.name}
                   >
                     <social.icon className="h-4 w-4" />
@@ -87,7 +87,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-[var(--abit-ink)]/70 hover:text-[var(--abit-blue)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:rounded-md inline-flex items-center"
+                      className="text-sm text-[var(--abit-ink)]/70 hover:text-[var(--abit-blue)] hover:translate-x-1 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--abit-yellow)] focus-visible:rounded-md inline-flex items-center"
                     >
                       {link.name}
                       {link.external && (
@@ -109,15 +109,15 @@ export function Footer() {
             </p>
             
             <div className="flex space-x-6 text-sm">
-              <Link 
-                href="/privacy" 
-                className="text-[var(--abit-ink)]/60 hover:text-[var(--abit-blue)] transition-colors focus-ring"
+              <Link
+                href="/privacy"
+                className="text-[var(--abit-ink)]/60 hover:text-[var(--abit-blue)] hover:translate-y-[-2px] transition-all duration-200 focus-ring"
               >
                 Privacy Policy
               </Link>
-              <Link 
-                href="/terms" 
-                className="text-[var(--abit-ink)]/60 hover:text-[var(--abit-blue)] transition-colors focus-ring"
+              <Link
+                href="/terms"
+                className="text-[var(--abit-ink)]/60 hover:text-[var(--abit-blue)] hover:translate-y-[-2px] transition-all duration-200 focus-ring"
               >
                 Terms of Service
               </Link>
