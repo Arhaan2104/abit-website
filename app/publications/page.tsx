@@ -39,7 +39,7 @@ export default function PublicationsPage() {
               {/* Content */}
               <div className="prose prose-lg md:prose-xl max-w-none text-center">
                 <p className="text-lg md:text-xl leading-relaxed text-[var(--abit-ink)] mb-8">
-                  The Nudgelet is <strong>ABIT's flagship publication</strong> and the go-to platform for Ashokan students, alumni, and astute readers who want to stay on top of the latest research, insights and applications in the field of behavioural science.
+                  The Nudgelet is <strong>ABIT&apos;s flagship publication</strong> and the go-to platform for Ashokan students, alumni, and astute readers who want to stay on top of the latest research, insights and applications in the field of behavioural science.
                 </p>
                 
                 <p className="text-lg md:text-xl leading-relaxed text-[var(--abit-ink)] mb-8">
@@ -87,11 +87,11 @@ export default function PublicationsPage() {
               {/* Content */}
               <div className="prose prose-lg md:prose-xl max-w-none text-center">
                 <p className="text-lg md:text-xl leading-relaxed text-[var(--abit-ink)] mb-8">
-                  Our newsletter, <strong>'Somewhat Rational'</strong> is carefully curated by students for students! The fortnightly publication is designed to bring behavioural science closer to everyday life by explaining the average Ashokan problem through the discipline.
+                  Our newsletter, <strong>&apos;Somewhat Rational&apos;</strong> is carefully curated by students for students! The fortnightly publication is designed to bring behavioural science closer to everyday life by explaining the average Ashokan problem through the discipline.
                 </p>
                 
                 <p className="text-lg md:text-xl leading-relaxed text-[var(--abit-ink)] mb-10">
-                  The feline insights offered by our in-house mascots <strong>Bijli and Badal</strong> provide the perfect dose of BSci to navigate college euphoria, heartbreak, and everything in between — until the point where they ruthlessly roast you, of course. After all, they're only somewhat rational!
+                  The feline insights offered by our in-house mascots <strong>Bijli and Badal</strong> provide the perfect dose of BSci to navigate college euphoria, heartbreak, and everything in between — until the point where they ruthlessly roast you, of course. After all, they&apos;re only somewhat rational!
                 </p>
 
                 {/* CTA Button */}

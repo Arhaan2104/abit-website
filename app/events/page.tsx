@@ -99,7 +99,7 @@ export default function EventsPage() {
                   </p>
                   <ul className="text-lg leading-relaxed text-[var(--abit-ink)] mb-6 space-y-2">
                     <li>• A detailed breakdown of a real-world case study showcasing behavioral science in both business and social impact consulting</li>
-                    <li>• Insights into Context Architecture™️ and how it's applied to solve real-world challenges</li>
+                    <li>• Insights into Context Architecture™️ and how it&apos;s applied to solve real-world challenges</li>
                   </ul>
                   <div className="space-y-3">
                     <p className="font-semibold text-[var(--abit-ink)]">Meet the Speakers:</p>
@@ -123,7 +123,7 @@ export default function EventsPage() {
                     <strong>Consuma</strong>, an AI-powered market research startup joined us for a chat with founder <strong>Abhilash Madubhashi</strong> to discover how their AI tool is reshaping market analysis.
                   </p>
                   <p className="text-lg leading-relaxed text-[var(--abit-ink)]">
-                    This event explored how Consuma's rapid, AI-driven tools are transforming data insights in today's fast-paced world. Consuma has worked with industry leaders like <strong>Airtel, Wiekfield and Foxtale</strong>.
+                    This event explored how Consuma&apos;s rapid, AI-driven tools are transforming data insights in today&apos;s fast-paced world. Consuma has worked with industry leaders like <strong>Airtel, Wiekfield and Foxtale</strong>.
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
@@ -161,7 +161,7 @@ export default function EventsPage() {
                     Other Student Engagement
                   </h4>
                   <p className="text-lg leading-relaxed text-[var(--abit-ink)] mb-6">
-                    ABIT engages with the student body by conducting frequent events outside Ashoka's beloved mess building! Events aim to engage students with behavioural science through <strong>games, discussion and help desks</strong>.
+                    ABIT engages with the student body by conducting frequent events outside Ashoka&apos;s beloved mess building! Events aim to engage students with behavioural science through <strong>games, discussion and help desks</strong>.
                   </p>
                   <div className="bg-[var(--abit-bg-soft-1)]/50 rounded-xl p-6 border border-[var(--abit-yellow)]/20">
                     <h5 className="font-semibold text-lg text-[var(--abit-ink)] mb-3">

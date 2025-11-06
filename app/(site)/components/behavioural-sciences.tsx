@@ -95,7 +95,7 @@ export default function BehaviouralSciencesSection() {
               <div className="flex-1 flex items-center justify-center h-full">
                 <div className="max-w-2xl text-center flex flex-col justify-center mx-auto animate-fade-in">
                   <p className="text-lg md:text-xl leading-relaxed text-[var(--abit-ink)] mb-6 transition-all duration-300 hover:text-[var(--abit-blue)]">
-                    The <strong>Ashoka Students Behavioural Insights Team (ABIT)</strong> is India's first student-led behavioural insights team, operating out of Ashoka University, affiliated and funded by the Centre for Social and Behaviour Change (CSBC).
+                    The <strong>Ashoka Students Behavioural Insights Team (ABIT)</strong> is India&apos;s first student-led behavioural insights team, operating out of Ashoka University, affiliated and funded by the Centre for Social and Behaviour Change (CSBC).
                   </p>
 
                   <p className="text-lg md:text-xl leading-relaxed text-[var(--abit-ink)] mb-6 transition-all duration-300 hover:text-[var(--abit-blue)]">
@@ -111,6 +111,7 @@ export default function BehaviouralSciencesSection() {
               {/* ABIT Logo on the right - vertical and properly positioned */}
               <div className="flex-shrink-0 flex items-center justify-end w-48">
                 <div className="relative transform rotate-90 transition-transform duration-500 hover:scale-110">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/images/abit-logo.png"
                     alt="ABIT Logo"
